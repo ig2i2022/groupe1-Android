@@ -1,4 +1,4 @@
-package com.example.sel;
+package com.example.sel.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,21 +7,19 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.sel.MyListAdapter;
+import com.example.sel.R;
 import com.example.sel.dao.CategoryDao;
 import com.example.sel.dao.PropostionDao;
 import com.example.sel.exception.SELException;
 
 import java.util.Arrays;
+import java.util.Observable;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView l;
-    String[] tutorials
-            = {"Algorithms", "Data Structures",
-            "Languages", "Interview Corner",
-            "GATE", "ISRO CS",
-            "UGC NET CS", "CS Subjects",
-            "Web Technologies"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         });
         Log.d("Test", "Hello World");
 
-
     }
+
+
+
 }

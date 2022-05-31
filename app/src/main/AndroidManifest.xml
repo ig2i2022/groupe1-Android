@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sel">
+    <!-- Declare features -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" /> <!-- Declare permissions -->
+    <permission android:name="android.permission.CAMERA" />
+    <permission android:name="android.permission.IMAGE_CAPTURE" />
+    <permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,14 +22,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SEL"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".TestActivity"
+            android:exported="true"
 
-        <activity android:name=".MainActivity">
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity
+            android:name=".map_activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".photo"
+            android:exported="true"></activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

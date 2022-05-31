@@ -8,7 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
 
-    private static final String BASE_URL = "http://192.168.43.38:8081/";
+    //private static final String BASE_URL = "http://172.20.10.3:8081/";
+    private static final String BASE_URL = "https://testsam.free.beeceptor.com/";
 
     private static final Gson gson = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")

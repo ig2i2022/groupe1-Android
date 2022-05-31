@@ -1,4 +1,4 @@
-package service;
+package com.example.sel.service;
 
 import model.Category;
 import model.Proposition;

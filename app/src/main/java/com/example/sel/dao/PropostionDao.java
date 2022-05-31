@@ -6,14 +6,13 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.example.sel.exception.SELErrorCode;
 import com.example.sel.exception.SELException;
+import com.example.sel.service.PropositionService;
 import com.example.sel.service.ServiceGenerator;
 
 import model.Proposition;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import service.PropositionService;
-
 import java.io.IOException;
 import java.util.List;
 

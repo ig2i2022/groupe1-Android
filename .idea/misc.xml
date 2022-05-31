@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/samue/AndroidStudioProjects/SEL/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SEL/app/src/main/res/layout/activity_map.xml" value="0.1" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SEL/app/src/main/res/layout/activity_photo.xml" value="0.18853171155516943" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SEL/app/src/main/res/layout/activity_test.xml" value="0.4" />
         <entry key="..\:/Users/samue/AndroidStudioProjects/SEL/app/src/main/res/layout/mylist.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/samue/AndroidStudioProjects/SEL/app/src/main/res/xml/file_paths.xml" value="0.11302083333333333" />
       </map>
     </option>
   </component>
