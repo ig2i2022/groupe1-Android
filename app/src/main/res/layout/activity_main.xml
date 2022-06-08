@@ -4,24 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    tools:context=".activity.FiltrePropositionsActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="118dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="60dp"
-        android:text="Liste Propositions"
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="36dp"
+        android:text="Filtres"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="424dp"
-        android:layout_height="883dp"
-        android:layout_marginTop="1dp"
+    <EditText
+        android:id="@+id/SearchBarFiltreTrans"
+        android:layout_width="209dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Search"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/minDateFiltreTrans"
+        android:layout_width="118dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="44dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="min date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:text="DATE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchBarFiltreTrans" />
+
+    <EditText
+        android:id="@+id/maxDateFiltreTrans"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Max date"
+        app:layout_constraintStart_toEndOf="@+id/minDateFiltreTrans"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:text="THEME"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minDateFiltreTrans" />
+
+    <ListView
+        android:id="@+id/CategoriesFiltreTransListView"
+        android:layout_width="158dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <Button
+        android:id="@+id/ValiderFiltreTransButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="52dp"
+        android:text="Valider filtre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ImageButton
+        android:id="@+id/HomePageButton"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ValiderFiltreTransButton"
+        app:srcCompat="@drawable/common_full_open_on_phone" />
+
+    <ImageButton
+        android:id="@+id/TransacPageButton"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintStart_toEndOf="@+id/HomePageButton"
+        app:layout_constraintTop_toBottomOf="@+id/ValiderFiltreTransButton"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ImageButton
+        android:id="@+id/ProfilePageButton"
+        android:layout_width="56dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintStart_toEndOf="@+id/TransacPageButton"
+        app:layout_constraintTop_toBottomOf="@+id/ValiderFiltreTransButton"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+    <CheckBox
+        android:id="@+id/TransArchiveeFiltreTransCheckBox"
+        android:layout_width="227dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="24dp"
+        android:text="Transactions archivées"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CategoriesFiltreTransListView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="249dp"
+        android:layout_height="95dp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="368dp">
+
+        <RadioButton
+            android:id="@+id/CreateurRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créateur" />
+
+        <RadioButton
+            android:id="@+id/BeneficiaireRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bénéficiaire" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

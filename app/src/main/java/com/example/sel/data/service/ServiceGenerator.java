@@ -1,29 +1,28 @@
-package com.example.sel.service;
+package com.example.sel.data.service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
 
-    //private static final String BASE_URL = "http://172.20.10.3:8081/";
-    private static final String BASE_URL = "https://testsam.free.beeceptor.com/";
+    private static final String BASE_URL = "http://192.168.1.60:8081/";
 
     private static final Gson gson = new GsonBuilder()
-            .setDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+            .setDateFormat("yyyy-MM-dd HH:mm:ss")
             .create();
 
-    private static Retrofit.Builder builder
+    private static final Retrofit.Builder builder
             = new Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create(gson))
-            ;
+            .addConverterFactory(GsonConverterFactory.create(gson));
 
-    private static Retrofit retrofit = builder.build();
+    private static final Retrofit retrofit = builder.build();
 
-    private static OkHttpClient.Builder httpClient
+    private static final OkHttpClient.Builder httpClient
             = new OkHttpClient.Builder();
 
     public static <S> S createService(Class<S> serviceClass) {

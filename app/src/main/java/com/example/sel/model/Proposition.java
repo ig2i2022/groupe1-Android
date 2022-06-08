@@ -1,27 +1,37 @@
-package model;
+package com.example.sel.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.time.LocalDateTime;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Proposition {
-
     @SerializedName("ID_PROPOSITION")
     private int id;
     @SerializedName("DESCRIPTION")
     private String description;
-    /*@SerializedName("DATE_DEBUT")
-    private LocalDateTime beginningDate;
+    @SerializedName("DATE_DEBUT")
+    private String beginningDate;
     @SerializedName("DATE_FIN")
-    private LocalDateTime endingDate;*/
+    private String endingDate;
     private float latitude;
     private float longitude;
-    @SerializedName("CATEGORIE")
-    private String categorie;
-    @SerializedName("COMPETENCE")
-    private String competence;
+    @SerializedName("ID_COMPETENCE")
+    private int idCompetence;
+    @SerializedName("ID_MEMBRE")
+    private int idMembre;
+    private Profile profile;
+    @SerializedName("prix")
+    private int prix;
 
+    public Profile getProfile() {
+        return profile;
+    }
 
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
 
     public int getId() {
         return id;
@@ -39,21 +49,32 @@ public class Proposition {
         this.description = description;
     }
 
-    /*public LocalDateTime getBeginningDate() {
-        return beginningDate;
+    public Date getBeginningDate() {
+        try {
+            return new SimpleDateFormat("yyyy-MM-dd").parse(beginningDate);
+        } catch (ParseException e) {
+            return new Date();
+
+        }
     }
 
-    public void setBeginningDate(LocalDateTime beginningDate) {
+    public void setBeginningDate(String beginningDate) {
         this.beginningDate = beginningDate;
     }
 
-    public LocalDateTime getEndingDate() {
-        return endingDate;
+    public Date getEndingDate() {
+        try {
+            return new SimpleDateFormat("yyyy-MM-dd").parse(endingDate);
+        } catch (ParseException e) {
+            return new Date();
+
+        }
+
     }
 
-    public void setEndingDate(LocalDateTime endingDate) {
+    public void setEndingDate(String endingDate) {
         this.endingDate = endingDate;
-    }*/
+    }
 
     public float getLatitude() {
         return latitude;
@@ -71,24 +92,27 @@ public class Proposition {
         this.longitude = longitude;
     }
 
-    public String getCategorie() {
-        return categorie;
+    public int getIdCompetence() {
+        return idCompetence;
     }
 
-    public void setCategorie(String categorie) {
-        this.categorie = categorie;
+    public void setIdCompetence(int idCompetence) {
+        this.idCompetence = idCompetence;
     }
 
-    public String getCompetence() {
-        return competence;
+    public int getIdMembre() {
+        return idMembre;
     }
 
-    public void setCompetence(String competence) {
-        this.competence = competence;
+    public void setIdMembre(int idMembre) {
+        this.idMembre = idMembre;
     }
 
-    @Override
-    public String toString() {
-        return description;
+    public int getPrix() {
+        return prix;
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
     }
 }

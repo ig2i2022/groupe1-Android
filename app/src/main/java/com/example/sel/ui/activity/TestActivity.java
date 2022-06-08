@@ -1,13 +1,12 @@
-package com.example.sel.activity;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.sel.ui.activity;
 
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sel.R;
 
 public class TestActivity extends AppCompatActivity {
-
 
 
     @Override

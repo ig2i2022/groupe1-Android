@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PropositionDetailActivity">
+
+    <include
+        layout="@layout/footer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <TextView
+        android:id="@+id/descriptionProposition"
+        android:layout_width="341dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="141dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionProposition" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/propositionProfileContainer"
+        android:layout_width="344dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="92dp"
+        app:cardBackgroundColor="#9ECFBFBF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionProposition">
+
+        <ImageView
+            android:id="@+id/CircleImage2"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:padding="3dp"
+            android:src="@drawable/download" />
+
+        <TextView
+            android:id="@+id/pseudoInProp"
+            android:layout_width="284dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="center_vertical"
+            android:text="PSEUDO"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView2"
+        android:layout_width="391dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/propositionProfileContainer" />
+</androidx.constraintlayout.widget.ConstraintLayout>
